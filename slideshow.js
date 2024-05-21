@@ -1,19 +1,20 @@
-// Thumbnail image controls
-function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
- 
- let slideIndex = 0;
- showSlides();
- 
- function showSlides() {
-     let i;
-     let slides = document.getElementsByClassName("slides");
-  for (i = 0; i < slides.length; i++) {
-     slides[i].style.display = "none";
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  if (n >= slides.length) {
+    slideIndex = 0;
+  }    
+  if (n < 0) {
+    slideIndex = slides.length - 1;
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-     slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
- }
+  for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex].style.display = "block";  
+}
