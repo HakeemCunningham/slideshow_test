@@ -21,35 +21,28 @@
     transform: translateY(-50%);
     width: auto;
     padding: 16px;
-    margin-top: -22px;
-    color: white;
+    color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 35px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
   }
 
   .prev {
-    left: 0;
-    border-radius: 0 10px 10px 0;
+    left: -50px;
+    border-radius: 50rem;
   }
   
   .next {
-    right: 0;
-    border-radius: 10px 0 0 10px;
+    right: -50px;
+    border-radius: 50rem;
   }
   
   .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    color: red;
   }
   
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
+
   
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+
   
